@@ -1,4 +1,4 @@
-Katalon Studio tips: getting List<org.openqa.selenium.WebElement> out of  a Web page by custom keyword
+getting a List<org.openqa.selenium.WebElement> from a Web page
 =====
 
 ## What is this?
