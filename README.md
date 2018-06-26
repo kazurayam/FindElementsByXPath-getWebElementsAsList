@@ -144,4 +144,4 @@ This is what I wanted to see.
 
 ### Extendibility
 
-The custom keyword `getWebElementsAsList`, which I presented here, returns `List<org.openqa.selenium.WebElement>`. This keyword would encourage you to develop your test cases using both of Katalon Studio's built-in keywords and the native API of the [Selenium WebDriver]( https://seleniumhq.github.io/selenium/docs/api/java/WebDriver). How can you extend this example? --- well, it is up to you. You can do whatever in the Katalon Studio as far as the WebDriver API supports. 
+The custom keyword `getWebElementsAsList`, which I presented here, returns `List<org.openqa.selenium.WebElement>` into the scope of test case in the Katalon Studio. This keyword would encourage you to develop your test cases using both of Katalon Studio's built-in keywords and the native API of the [Selenium WebDriver]( https://seleniumhq.github.io/selenium/docs/api/java/WebDriver). How can you extend this example? --- well, it is up to you. You can do whatever in the Katalon Studio as far as the WebDriver API supports. 
