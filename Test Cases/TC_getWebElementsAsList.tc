@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_getWebElementsAsList</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d090faf6-0cc5-4c99-b15a-1efe89ab35a4</testCaseGuid>
+</TestCaseEntity>
