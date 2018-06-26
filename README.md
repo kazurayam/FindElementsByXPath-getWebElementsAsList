@@ -3,7 +3,7 @@ getting a List<org.openqa.selenium.WebElement> from a Web page
 
 ## What is this?
 
-This is a simple Katalon Studio project for demonstration purpose.
+This is a simple [Katalon Studio](https://www.katalon.com/) project for demonstration purpose.
 You can clone this out on you PC and execute it with your Katalon Studio.
 
 This project is developed to propose a solution for the following discussion:
