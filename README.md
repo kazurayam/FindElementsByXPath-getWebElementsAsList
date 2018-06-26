@@ -38,7 +38,7 @@ Let me define a problem with a simple HTML as target.
     <option value="Seoul">Seoul CURA Healthcare Center</option>
 </select>
 ```
-The way how the web elements are marked up is not significant. You may have &lt;li&gt;, &lt;tr&gt;, &lt;a&gt; or whatever. We are able to code appropriate XPath expression to select the HTML elements of our interest out of the target page.
+The way how the web elements are marked up is not so significant. You may have &lt;li&gt;, &lt;tr&gt;, &lt;a&gt; or whatever. We are able to code appropriate XPath expression to select the HTML elements of our interest out of the target page.
 
 2. My test case has a list of texts. Let me name it as **the expected data**. Let me suppose I have the following literal in my test case code, for example:
 ```
@@ -59,7 +59,7 @@ I think that this problem is a frequently-asked-question in the in the Katalon f
 - https://forum.katalon.com/discussion/6967/get-text-of-multiple-div-elements
 - https://forum.katalon.com/discussion/7520/the-xpath-for-the-url-is-correct-but-not-visible-if-added-via-addproperty
 
-## Blocking shortage of Katalon Studio
+## Blocking problem of Katalon Studio
 
 Now I want to perform, in my test case, an iteration over **the found elements**. However, Katalon Studio does not provide any built-in keyword which returns a list of web elements out of the target Web page.
 
@@ -144,4 +144,4 @@ This is what I wanted to see.
 
 ### Extendibility
 
-The custom keyword `getWebElementsAsList`, which I presented here, returns `List<org.openqa.selenium.WebElement>` into the scope of test case in the Katalon Studio. This keyword would encourage you to develop your test cases using both of Katalon Studio's built-in keywords and the native API of the [Selenium WebDriver]( https://seleniumhq.github.io/selenium/docs/api/java/WebDriver). How can you extend this example? --- well, it is up to you. You can do whatever in the Katalon Studio as far as the WebDriver API supports. 
+The custom keyword `getWebElementsAsList`, which I presented here, returns `List<org.openqa.selenium.WebElement>` into the scope of test case in the Katalon Studio. This keyword would encourage you to develop your test cases using both of Katalon Studio's built-in keywords and the native API of the [Selenium WebDriver]( https://seleniumhq.github.io/selenium/docs/api/java/WebDriver). How can you extend this example? --- Well, it is up to you. You can do whatever in the Katalon Studio as far as the WebDriver API supports.
