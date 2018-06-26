@@ -53,15 +53,15 @@ List<Map<String,String>> data =  [
 4. The two lists roughly corresponds; but these are not 100% correspondent. I mean:
   + The size of **the found elements** is not necessarily equal to the size of **the expected data**. Making one-to-one correspondence between entries of each lists may results remainders.  
   + These lists may be sorted differently. Either of these may be unsorted at all.
-5. I want to iterate over **the expected data** to find out if each text is displayed in the target page. Therefore ***I want to perform nested iteration over the found elements*** in order to perform text matching.
+5. I want to iterate over **the expected data** to find out if each text is displayed in the target page. Therefore ***I want to perform nested iteration over the found elements*** for each text in **the expected data**.
 
-I think that this problem is frequently asked in the in the Katalon forum.
+I think that this problem is a frequently-asked-question in the in the Katalon forum.
 - https://forum.katalon.com/discussion/6967/get-text-of-multiple-div-elements
 - https://forum.katalon.com/discussion/7520/the-xpath-for-the-url-is-correct-but-not-visible-if-added-via-addproperty
 
 ## Blocking shortage of Katalon Studio
 
-Now I want to perform, in my test case, an iteration over **the found elements**. However, Katalon Studio does not provide a built-in keyword which returns a list of web elements out of the target Web page. This is the very problem I found.
+Now I want to perform, in my test case, an iteration over **the found elements**. However, Katalon Studio does not provide any built-in keyword which returns a list of web elements out of the target Web page.
 
 ## Solution proposed
 
@@ -129,7 +129,7 @@ WebUI.closeBrowser()
 
 ### Result
 
-When I execuite this test case, I got the following output in the log:
+When I execute my test case, I got the following output in the log:
 ```
 >>> Tokyo CURA Healthcare Center is displayed: yes
 ...
@@ -140,4 +140,8 @@ When I execuite this test case, I got the following output in the log:
 >>> New York CURA Healthcare Center is displayed: no
 ```
 
-This is what I wanted to see. My success.
+This is what I wanted to see.
+
+### Extendibility
+
+The custom keyword `getWebElementsAsList`, which I presented here, returns `List<org.openqa.selenium.WebElement>`. This keyword would encourage you to develop your test cases using both of Katalon Studio's built-in keywords and the native API of the [Selenium WebDriver]( https://seleniumhq.github.io/selenium/docs/api/java/WebDriver). How can you extend this example? --- well, it is up to you. You can do whatever in the Katalon Studio as far as the WebDriver API supports. 
