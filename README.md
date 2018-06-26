@@ -39,6 +39,7 @@ Let me define a problem with a simple HTML as target.
 </select>
 ```
 The way how the web elements are marked up is not significant. You may have &lt;li&gt;, &lt;tr&gt;, &lt;a&gt; or whatever. We are able to code appropriate XPath expression to select the elements of our interest out of the target HTML.
+
 2. My test code has a list of expected texts to be displayed in the target pages. Let me name it as **the expected data**. Let me suppose I have the following literal in my test case, for example:
 ```
 List<Map<String,String>> data =  [
