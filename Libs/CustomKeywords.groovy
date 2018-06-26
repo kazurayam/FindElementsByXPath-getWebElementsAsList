@@ -11,17 +11,3 @@ def static "com.kazurayam.ksbackyard.FindElementsByXPath.getWebElementsAsList"(
     (new com.kazurayam.ksbackyard.FindElementsByXPath()).getWebElementsAsList(
         	xpath4elements)
 }
-
-def static "com.kazurayam.ksbackyard.FindElementsByXPath.getElementContentsAsList"(
-    	String xpath4elements	) {
-    (new com.kazurayam.ksbackyard.FindElementsByXPath()).getElementContentsAsList(
-        	xpath4elements)
-}
-
-def static "com.kazurayam.ksbackyard.FindElementsByXPath.getAttributeValuesAsList"(
-    	String xpath4elements	
-     , 	String attributeName	) {
-    (new com.kazurayam.ksbackyard.FindElementsByXPath()).getAttributeValuesAsList(
-        	xpath4elements
-         , 	attributeName)
-}
