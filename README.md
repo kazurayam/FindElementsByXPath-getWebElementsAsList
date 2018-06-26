@@ -6,11 +6,13 @@ getting a List<org.openqa.selenium.WebElement> from a Web page
 This is a simple [Katalon Studio](https://www.katalon.com/) project for demonstration purpose.
 You can clone this out on you PC and execute it with your Katalon Studio.
 
+This project was developped using Katalon Studio ver5.4.2
+
 This project is developed to propose a solution for the following discussion:
 
 - https://forum.katalon.com/discussion/7520/the-xpath-for-the-url-is-correct-but-not-visible-if-added-via-addproperty
 
-Question raised there was:
+The question raised in the disscussion was:
 
 >Emails sent from the .csv in this order:
 > - email 1
@@ -37,7 +39,7 @@ Let me define a problem with a simple HTML as target.
 </select>
 ```
 The way how the web elements are marked up is not significant. You may have &lt;li&gt;, &lt;tr&gt;, &lt;a&gt; or whatever. We are able to code appropriate XPath expression to select the elements of our interest out of the target HTML.
-2. My test code has a list of expected texts to be displayed in the target pages. Let me name it as **the expected texts**. Let me suppose I have the following literal in my test case, for example:
+2. My test code has a list of expected texts to be displayed in the target pages. Let me name it as **the expected data**. Let me suppose I have the following literal in my test case, for example:
 ```
 List<Map<String,String>> data =  [
     ["text":"Hongkong CURA Healthcare Center"],
@@ -46,11 +48,11 @@ List<Map<String,String>> data =  [
 	["text":"New York CURA Healthcare Center"]
 ]
 ```
-3. The two lists roughly corresponds; but these are not 100% correspondent. I mean:
-  - The size of **the found elements** is not necessarily equal to the size of **the expected texts**. Making one-to-one correspondence between entries of each lists may results remainders.  
+3. I want to determine 'yes' or 'no' for each items of **the expected data**. My test case should emit message for each text if it is "displayed:yes" or "displayed:no" in the target Web page.
+4. The two lists roughly corresponds; but these are not 100% correspondent. I mean:
+  - The size of **the found elements** is not necessarily equal to the size of **the expected data**. Making one-to-one correspondence between entries of each lists may results remainders.  
   - These lists may be sorted differently. Either of these may be unsorted at all.
-4. I want to iterate over **the expected texts** to find out if each text is displayed in the target page. Therefore ***I want to perform nested iteration over the found elements*** in order to perform text matching.
-5. I want to determine 'yes' or 'no' for each items of **the expeted texts**. My test case will emit **the found elements** with "displayed:yes" or "displayed:no" as the final report.
+5. I want to iterate over **the expected data** to find out if each text is displayed in the target page. Therefore ***I want to perform nested iteration over the found elements*** in order to perform text matching.
 
 I think that this problem is frequently asked in the in the Katalon forum.
 - https://forum.katalon.com/discussion/6967/get-text-of-multiple-div-elements
