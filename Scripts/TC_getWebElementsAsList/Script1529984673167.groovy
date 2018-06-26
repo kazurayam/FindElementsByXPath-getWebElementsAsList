@@ -37,7 +37,7 @@ for (int i = 0; i < data.size(); i++) {
 }
 
 for (Map m : data) {
-	WebUI.comment("${m.text}:${m.found}")
+	WebUI.comment(">>> ${m.text} is displayed: ${m.found}")
 }
 
 WebUI.closeBrowser()
