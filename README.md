@@ -38,9 +38,9 @@ Let me define a problem with a simple HTML as target.
     <option value="Seoul">Seoul CURA Healthcare Center</option>
 </select>
 ```
-The way how the web elements are marked up is not significant. You may have &lt;li&gt;, &lt;tr&gt;, &lt;a&gt; or whatever. We are able to code appropriate XPath expression to select the elements of our interest out of the target HTML.
+The way how the web elements are marked up is not significant. You may have &lt;li&gt;, &lt;tr&gt;, &lt;a&gt; or whatever. We are able to code appropriate XPath expression to select the HTML elements of our interest out of the target page.
 
-2. My test code has a list of expected texts to be displayed in the target pages. Let me name it as **the expected data**. Let me suppose I have the following literal in my test case, for example:
+2. My test case has a list of texts. Let me name it as **the expected data**. Let me suppose I have the following literal in my test case code, for example:
 ```
 List<Map<String,String>> data =  [
     ["text":"Hongkong CURA Healthcare Center"],
@@ -51,8 +51,8 @@ List<Map<String,String>> data =  [
 ```
 3. I want to determine 'yes' or 'no' for each items of **the expected data**. My test case should emit message for each text if it is "displayed:yes" or "displayed:no" in the target Web page.
 4. The two lists roughly corresponds; but these are not 100% correspondent. I mean:
-  - The size of **the found elements** is not necessarily equal to the size of **the expected data**. Making one-to-one correspondence between entries of each lists may results remainders.  
-  - These lists may be sorted differently. Either of these may be unsorted at all.
+  1. The size of **the found elements** is not necessarily equal to the size of **the expected data**. Making one-to-one correspondence between entries of each lists may results remainders.  
+  2. These lists may be sorted differently. Either of these may be unsorted at all.
 5. I want to iterate over **the expected data** to find out if each text is displayed in the target page. Therefore ***I want to perform nested iteration over the found elements*** in order to perform text matching.
 
 I think that this problem is frequently asked in the in the Katalon forum.
